@@ -1,8 +1,10 @@
 const path = require('path');
 
 const mode = process.env.NODE_ENV || 'development';
+const {VueLoaderPlugin} = require('vue-loader')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const devMode = mode === 'development';
 
 const target = devMode ? 'web' : 'browserslist';
@@ -26,6 +28,7 @@ module.exports = {
         assetModuleFilename: 'assets/[contenthash][ext]'
     },
     plugins: [
+        new VueLoaderPlugin(),
         new HtmlWebpackPlugin(
             {
                 template: path.resolve(__dirname, 'src', 'index.html')
@@ -35,10 +38,28 @@ module.exports = {
             {
                 filename: '[name].[contenthash].css',
             }
-        ),
+        )         
     ],
     module: {
         rules: [
+            {
+                test: /\.vue$/i,
+                loader: 'vue-loader',
+                options: {
+                  loaders: {
+                    'scss': [
+                      'vue-style-loader',
+                      'css-loader',
+                      'sass-loader'
+                    ],
+                    'sass': [
+                      'vue-style-loader',
+                      'css-loader',
+                      'sass-loader?indentedSyntax'
+                    ]
+                  }
+                }
+            },
             {
                 test: /\.html$/i,
                 loader: 'html-loader'
