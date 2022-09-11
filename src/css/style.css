@@ -31,6 +31,7 @@ aside, nav, footer, header, section, main {
 h1, h2, h3, h4, h5, h6, p {
   font-size: inherit;
   font-weight: inherit;
+  margin: 0;
 }
 
 ul, ul li {
@@ -208,8 +209,297 @@ legend {
   font-weight: 900;
   font-style: normal;
 }
-body {
+h1,
+h2,
+h3,
+p,
+span,
+label,
+a {
   font-family: "Gilroy";
   font-style: normal;
+  color: #1E1E1E;
+}
+
+h1,
+h2,
+h3 {
   font-weight: 800;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p,
+span,
+label {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.wide-arrow span {
+  color: #E58411;
+  font-size: 14px;
+  font-weight: 500;
+}
+.wide-arrow svg {
+  fill: #E58411;
+}
+
+.header-background {
+  height: 1000px;
+  background-image: url(../assets/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header h1,
+.header h2,
+.header h3,
+.header p,
+.header a {
+  color: #FFFFFF;
+}
+.header .navbar {
+  padding-top: 40px;
+}
+.header .navbar .logo,
+.header .navbar .list-logo {
+  fill: #FFFFFF;
+}
+.header .navbar .nav-link:hover {
+  color: #E58411;
+}
+.header .navbar .logo {
+  height: 20px;
+}
+.header .navbar .dropdown-btn svg {
+  fill: #FFFFFF;
+  transition: fill 0.15s ease-in-out;
+}
+.header .navbar .dropdown-btn:hover .nav-link,
+.header .navbar .dropdown-btn:active .nav-link {
+  color: #E58411;
+}
+.header .navbar .dropdown-btn:hover svg,
+.header .navbar .dropdown-btn:active svg {
+  fill: #E58411;
+}
+.header .navbar .dropdown-menu {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.15);
+}
+.header .navbar .dropdown-menu .dropdown-item {
+  border-radius: 5px;
+}
+.header .navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #E58411;
+}
+.header .navbar .shopping-cart svg {
+  fill: #FFFFFF;
+}
+.header .navbar .shopping-cart .shopping-cart-number {
+  height: 20px;
+  aspect-ratio: 1/1;
+  padding: 5px;
+  border-radius: 50%;
+  background: #E58411;
+  text-align: center;
+  margin-left: -20px;
+}
+.header .navbar .shopping-cart .shopping-cart-number span {
+  color: #FFFFFF;
+  font-size: 10px;
+}
+.header .header-content h1 {
+  margin-top: 90px;
+}
+.header .header-content p {
+  margin-top: 15px;
+  font-weight: 400;
+}
+.header .header-content .search {
+  margin-top: 45px;
+}
+.header .header-content .search .search-button {
+  margin: auto 0;
+  margin-left: -48px;
+  width: 40px;
+  height: 40px;
+  padding: 11px;
+  border-radius: 24px;
+  background: url(../components/img/search.svg);
+  background-color: #E58411;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+.header .header-content .search .search-field {
+  width: 344px;
+  height: 56px;
+  color: #FFFFFF;
+  padding: 8px 8px 8px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 0.861538px solid rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 42px;
+}
+
+.content .list-tabs {
+  background: #F7F7F7;
+  margin-bottom: 210px;
+}
+.content .list-tabs .tabs {
+  padding: 6px;
+  background: #EEEEEE;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.content .list-tabs .tabs .tab {
+  transition: 0.15s ease-in-out;
+  padding: 7px 20px;
+}
+.content .list-tabs .tabs .tab label {
+  font-weight: 500;
+}
+.content .list-tabs .tabs .active-tab {
+  background-color: #FFFFFF;
+}
+.content .list-tabs .arrow-button {
+  background-color: #FFFFFF;
+  aspect-ratio: 1/1;
+  margin: auto 0;
+  border-radius: 50%;
+  z-index: 1;
+  max-width: 50px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 12px;
+  cursor: pointer;
+}
+.content .list-tabs .arrow-button svg {
+  fill: #1E1E1E;
+}
+.content .list-tabs .arrow-button-prev {
+  margin-right: -25px;
+}
+.content .list-tabs .arrow-button-next {
+  transform: rotate(180deg);
+  margin-left: -25px;
+}
+.content .list-tabs .product-cards {
+  padding-top: 50px;
+  margin-top: 80px;
+  list-style: none;
+  overflow-x: hidden;
+  gap: 42px;
+}
+.content .list-tabs .product-cards .product-card {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  background: #FAFAFA;
+  border-radius: 20px;
+  border: none;
+}
+.content .list-tabs .product-cards .product-card img {
+  margin-top: -50px;
+  padding: 0 25px 25px 35px;
+}
+.content .list-tabs .product-cards .product-card .product-card-foot {
+  background: #FFFFFF;
+  border-radius: 0 0 20px 20px;
+}
+.content .list-tabs .product-cards .product-card .product-card-foot span {
+  font-weight: 600;
+  font-size: 22px;
+}
+.content .list-tabs .product-cards .product-card .product-card-foot .product-type {
+  font-size: 17px;
+  color: #8D8D8D;
+}
+.content .big-info-block .big-info-block-head {
+  color: #E58411;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.175em;
+}
+.content .big-info-block .big-info-block-title {
+  text-transform: capitalize;
+}
+.content .img-group-and-big-info-block {
+  margin-bottom: 240px;
+}
+.content .feedback {
+  margin-bottom: 220px;
+}
+.content .feedback .feedback-cards {
+  gap: 40px;
+}
+.content .feedback .feedback-head {
+  color: #E58411;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.175em;
+  margin-bottom: 20px;
+}
+.content .feedback .feedback-card {
+  margin-top: 60px;
+  border: none;
+}
+.content .feedback .feedback-card .feedback-background {
+  border-radius: 20px;
+  max-height: 450px;
+  max-width: 370px;
+}
+.content .feedback .feedback-card .feedback-card-foot {
+  height: 200px;
+  max-width: 330px;
+  margin: -220px 20px 20px 20px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+.content .feedback .feedback-card .feedback-card-foot .feedback-ava {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #FFFFFF;
+  padding: 8px;
+  margin-top: -50px;
+}
+.content .feedback .feedback-card .feedback-card-foot .feedback-name {
+  font-weight: 800;
+}
+.content .feedback .feedback-card .feedback-card-foot .feedback-comment {
+  font-size: 14px;
+}
+
+.card-footer {
+  background: #F7F7F7;
+  padding: 120px 0 60px 0;
+}
+.card-footer .footer-links .row a {
+  margin-bottom: 20px;
+}
+.card-footer .logo {
+  fill: #1E1E1E;
+}
+.card-footer .title {
+  color: #E58411;
+}
+.card-footer .footer-copy {
+  margin-top: 120px;
 }/*# sourceMappingURL=style.css.map */

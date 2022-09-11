@@ -25,7 +25,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
         filename: '[name].[contenthash].js',
-        assetModuleFilename: 'assets/[contenthash][ext]'
+        assetModuleFilename: 'assets/[name][ext]'
     },
     plugins: [
         new VueLoaderPlugin(),
